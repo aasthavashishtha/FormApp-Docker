@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page-Docker</title>
+    <style>
+    body {
+      background-color: #003366;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff10;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .field {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0066cc;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0052a3;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi Explorer, Welcome to My Docker Application App!</h1>
+        <p>You can sign up to this platform to acceess all important notifications.</p>
+
+        <form action="/addUser" method="post" target="_blank" id="signupForm">
+            <div class="field">
+                <label for="email">Email: </label>
+                <input type="text" placeholder="johndoe@email.com" name="email">
+            </div>
+            <div class="field">
+                <label for="username">Username: </label>
+                <input type="text" placeholder="John Doe" name="username">
+            </div>
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" placeholder="password" name="password">
+            </div>
+
+            <button id="formBtn">Sign up</button>
+        </form>
+        <script>
+            function resetForm(){
+                let myForm = document.getElementById("signupForm");
+                myForm.reset();
+                return false;   //prevents the form from actually submitting to the server.
+            }
+        </script>
+    </div>
+</body>
+</html>
